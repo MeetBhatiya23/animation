@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.body-soda {
+    margin: 0;
+    background-image: url(/images/backBG.png);
+    backface-visibility: 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    font-family: Poppins;
+    overflow: hidden;
+}
+.header {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 40px;
+}
+.main{
+    position: absolute;
+    top: 0;
+}
+.title{
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+.title img{
+    width: 400px;
+}
+.title h1{
+    font-family: "Karantina", system-ui;
+   color: #383839;
+    /* line-height: 1em; */
+    font-size: 6em;
+    margin: 0;
+}
+.title p{
+    font-family: "Karantina", system-ui;
+   color: #383839;
+    line-height: 1em;
+    font-size: 2em;
+    margin: 0;
+}
+.header .main h1 {
+    font-family: "Karantina", system-ui;
+    /* line-height: 1em; */
+    font-size: 16em;
+    color: #383839;
+    margin: 0;
+    /* position: absolute; */
+}
+
+.soda_banner {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.soda_banner .product {
+    /* background-color: red; */
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left: 0px;
+    display: flex;
+}
+
+.soda_banner .product .soda {
+    background: var(--url) var(--left) 0, url("/images/mockup.png");
+    background-size: auto 100%;
+    width: 288px;
+    aspect-ratio: 2 / 4;
+    background-blend-mode: multiply;
+    mask-image: url("/images/mockup.png");
+    mask-size: auto 100%;
+    transition: 0.7s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.soda_banner .product:hover {
+    --left: -1000px;
+    transform: translateX(-50%) translatey(-40%);
+}
+
+.soda_banner .product .soda:nth-child(2) {
+    opacity: 0;
+}
+.soda_banner .product:hover .soda:nth-child(2) {
+    opacity: 1;
+}
+
+.soda_banner .rock {
+    position: absolute;
+    inset: 0 0 0 0;
+    pointer-events: none;
+}
+.soda_banner .rock img {
+    position: absolute;
+    transition: 0.7s;
+}
+.soda_banner .rock img:nth-child(1) {
+    height: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+}
+.soda_banner:has(.product:hover) .rock img:nth-child(1) {
+    transform: translateX(-50%) translateY(50px);
+}
+.soda_banner .rock img:nth-child(2) {
+    height: 50%;
+    left: 0;
+    bottom: -30px;
+}
+.soda_banner:has(.product:hover) .rock img:nth-child(2) {
+    transform: translateX(-100px) translateY(100px);
+}
+.soda_banner .rock img:nth-child(3) {
+    height: 100%;
+    right: 0;
+    bottom: -100px;
+    rotate: -25deg;
+}
+.soda_banner:has(.product:hover) .rock img:nth-child(3) {
+    transform: translateX(100px) translateY(100px);
+}
+    
