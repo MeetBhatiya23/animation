@@ -49,7 +49,7 @@ const Dental = () => {
                                                 marginTop: "150px",
                                             }),
                                         }}
-                                        src="/public/dental-images/8.png"
+                                        src="/dental-images/8.png"
                                         alt=""
                                     />
                                 )}
